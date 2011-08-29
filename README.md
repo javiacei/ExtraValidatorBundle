@@ -64,7 +64,7 @@ use Ideup\ExtraValidatorBundle\Validator as ExtraAssert;
 
 class AcmeEntity {
   /**
-   * @Assert\NotBlank(message="El DNI es obligatorio")
+   * @Assert\NotBlank(message="You have to input a phone number")
    * @ExtraAssert\MobilePhone(message="Your mobile phone number is not valid")
    */
   protected $phone;
