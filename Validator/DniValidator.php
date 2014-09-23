@@ -55,7 +55,7 @@ class DniValidator extends ConstraintValidator
 
         $plus = $dniCharacters[2] + $dniCharacters[4] + $dniCharacters[6];
         for ($i = 1; $i < 8; $i += 2) {
-            $plus += substr((2 * $dniCharacters[$i]), 0, 1) + substr((2 * $dniCharacters[$i]), 1, 1);
+            $plus += (int) substr((2 * $dniCharacters[$i]), 0, 1) + (int) substr((2 * $dniCharacters[$i]), 1, 1);
         }
         $n = 10 - substr($plus, strlen($plus) - 1, 1);
         if (preg_match('/^[KLM]{1}/', $dni)) {
