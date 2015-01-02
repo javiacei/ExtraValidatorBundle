@@ -11,17 +11,19 @@ This package contains a set of useful validators and asserts to use in your proj
 
 ## How to include ExtraValidator
 
-You should clone this repository in your Symfony's `vendor/bundles` directory, add it into `autoload.php` file:
+In your composer.json
 
-```php
-<?php
-$loader->registerNamespaces(array(
-  'Symfony' => array(__DIR__.'/../vendor/symfony/src', __DIR__.'/../vendor/bundles'),
-  ...
-  'Ideup'   => __DIR__.'/../vendor/bundles',
-  );
+```json
+"repositories": [
+  {
+      "type": "git",
+      "url": "https://github.com/xinjia95/ExtraValidatorBundle"
+  }
+],
+"require": {
+  "javiacei/extra-validator-bundle": "dev-master"
+}
 ```
-
 ... and in your `AppKernel.php` file:
 
 ```php
