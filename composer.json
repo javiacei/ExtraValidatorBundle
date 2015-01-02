@@ -1,0 +1,16 @@
+{
+    "name": "javiacei/extra-validator-bundle",
+    "type": "symfony-bundle",
+    "description": "Symfony2 Validators for Spain Postcodes and Personal identifications",
+    "keywords": [],
+    "license": "MIT",
+    "authors": [],
+    "require": {
+        "php": ">=5.3",
+    },
+    "autoload": {
+        "psr-0": { "Ideup\\ExtraValidatorBundle": "" }
+    },
+    "target-dir": "Ideup\ExtraValidatorBundle",
+    "minimum-stability": "dev",
+}
