@@ -17,7 +17,7 @@ In your composer.json
 "repositories": [
   {
       "type": "git",
-      "url": "https://github.com/xinjia95/ExtraValidatorBundle"
+      "url": "https://github.com/javiacei/ExtraValidatorBundle"
   }
 ],
 "require": {
