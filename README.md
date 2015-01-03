@@ -32,7 +32,7 @@ public function registerBundles()
 {
     $bundles = array(
       ...
-        new Ideup\ExtraValidatorBundle\ExtraValidatorBundle(),
+        new Ideup\ExtraValidatorBundle\IdeupExtraValidatorBundle(),
       );
 }
 ```
