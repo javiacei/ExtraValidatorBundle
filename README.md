@@ -15,7 +15,7 @@ In your composer.json
 
 ```json
 "require": {
-  "javiacei/extra-validator-bundle": "dev-master"
+  "ideup/extra-validator-bundle": "dev-master"
 }
 ```
 ... and in your `AppKernel.php` file:
