@@ -2,10 +2,8 @@
 
 namespace Ideup\ExtraValidatorBundle\Validator;
 
-use
-    Symfony\Component\Validator\ConstraintValidator,
-    Symfony\Component\Validator\Constraint
-;
+use Symfony\Component\Validator\ConstraintValidator;
+use Symfony\Component\Validator\Constraint;
 
 class DniValidator extends ConstraintValidator
 {
@@ -13,8 +11,23 @@ class DniValidator extends ConstraintValidator
     protected $standardDniExpr = '/(^[0-9]{8}[A-Z]{1}$)/';
     protected $avaliableLastChar = 'TRWAGMYFPDXBNJZSQVHLCKE';
 
-
+    /**
+     * @param $value
+     * @param Constraint $constraint
+     * @return bool
+     * @deprecated In Symfony 2.6 does not work but remains backward compatibility 2.3
+     */
     public function isValid($value, Constraint $constraint)
+    {
+        $this->validate($value, $constraint);
+    }
+
+    /**
+     * @param mixed $value
+     * @param Constraint $constraint
+     * @return bool
+     */
+    public function validate($value, Constraint $constraint)
     {
         $ret = $this->checkDni($value);
 

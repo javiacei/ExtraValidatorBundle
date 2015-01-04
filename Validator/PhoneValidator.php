@@ -15,14 +15,20 @@ use Symfony\Component\Validator\Constraint;
 class PhoneValidator extends ConstraintValidator
 {
     /**
-     * @param string $value
+     * @param $value
      * @param Constraint $constraint
      * @return bool
+     * @deprecated In Symfony 2.6 does not work but remains backward compatibility 2.3
      */
     public function isValid($value, Constraint $constraint)
     {
+        $this->validate($value, $constraint);
+    }
+
+    public function validate($value, Constraint $constraint)
+    {
         if (empty($value)) {
-           return true;
+            return true;
         }
 
         $ret = $this->validateNumber($value, $constraint->format);
