@@ -14,12 +14,6 @@ This package contains a set of useful validators and asserts to use in your proj
 In your composer.json
 
 ```json
-"repositories": [
-  {
-      "type": "git",
-      "url": "https://github.com/javiacei/ExtraValidatorBundle"
-  }
-],
 "require": {
   "javiacei/extra-validator-bundle": "dev-master"
 }
