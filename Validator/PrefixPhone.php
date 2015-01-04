@@ -8,7 +8,7 @@ use Symfony\Component\Validator\Constraint;
 /**
  * @Annotation
  */
-class Phone extends Constraint
+class PrefixPhone extends Constraint
 {
     public $message = "It is not a valid phone number";
     public $format  = '/(\+\d{2,3})?\s+(\d{2,3}\s)+|(\d+)/';
