@@ -34,7 +34,9 @@ class PhoneValidator extends ConstraintValidator
         $ret = $this->validateNumber($value, $constraint->format);
 
         if (!$ret) {
-            $this->setMessage($constraint->message);
+            $this->context->addViolation($constraint->message, array(
+                '{{ value }}' => $this->formatValue($value),
+            ));
         }
 
         return $ret;
